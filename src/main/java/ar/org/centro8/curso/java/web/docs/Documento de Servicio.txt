@@ -1,0 +1,38 @@
+URL Server: http://localhost:8084/AppWeb/v1
+
+
+Servicio Clientes
+
+    ClienteAll
+    URL: /ClienteAll
+        Parametro de entrada: null
+        Parametro de salida: List<Cliente> en JSON
+        Ejemplo prueba:
+        URL Server+/ClienteAll
+
+
+    ClienteAlta
+    URL: /ClienteAlta
+        Parametros de entrada: String nombre, String apellido, int edad, String direccion, String email, String telefono, TipoDocumento tipoDocumento, String numeroDocumento
+        Parametro de salida: int id
+        Ejemplo prueba:
+        URL Server+/ClienteAlta?nombre=Raul&apellido=Deguer&edad=70&direccion=Capital&email=deguer@mail&telefono=99999999&tipoDocumento=DNI&numeroDocumento=22222222
+
+    
+    ClienteBaja
+    URL: /ClienteBaja
+        Parametro de entrada: int id
+        Parametro de salida: true / false
+        Ejemplo prueba:
+        URL Server+/ClienteBaja?id=30
+
+  
+    ClienteLikeApellido
+    URL: /ClienteLikeApellido
+        Parametro de entrada: String apellido
+        Parametro de salida: List<Cliente> en JSON
+        Ejemplo prueba:
+        URL Server+/ClienteLikeApellido?apellido=Perez
+
+
+
